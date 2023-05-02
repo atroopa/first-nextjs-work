@@ -1,11 +1,10 @@
 import Head from 'next/head' 
 import { Inter } from 'next/font/google'
+import ArticleList from '@/components/ArticleList';
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home({articles}) {
-
-  console.log(articles);
 
   return (
     <div>
@@ -18,13 +17,7 @@ export default function Home({articles}) {
         Welcome to next
       </div>
 
-      <div className='text-2xl'>
-          <ul>
-            {articles.map((article) => (
-              <li key={article.id}>{article.title}</li>
-            ))}
-        </ul>
-      </div>
+      <ArticleList articles={articles} />
 
     </div>
   )

@@ -7,7 +7,7 @@ export default function Layout({children}) {
     return (
       <div>
         <Nav/>
-        <div className="flex flex-col justify-center items-center w-full h-full bg-gray-200">
+        <div className="flex flex-col justify-center items-center w-full h-full">
             <main >
                 <Header/>
                 {children}
