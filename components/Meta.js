@@ -18,4 +18,10 @@ const Meta = ({title, keyword, description}) => {
   )
 }
 
-export default Meta
+Meta.defaultProps = {
+    title :       "omid hajavi",
+    description:  "omid hajavi",
+    keyword:      "omid hajavi"
+}
+
+export default Meta;
