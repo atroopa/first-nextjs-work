@@ -6,7 +6,7 @@ const Meta = ({title, keyword, description}) => {
   return (
     <Head>
         <title>
-            {title}
+            ParsClick - {title}
         </title>
 
         <meta name="viewport" content="width=device-width initial-scale=1" />
