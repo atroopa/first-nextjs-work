@@ -1,6 +1,7 @@
 import Head from 'next/head' 
 import { Inter } from 'next/font/google'
 import ArticleList from '@/components/ArticleList';
+import { server } from '@/config';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -25,7 +26,7 @@ export default function Home({articles}) {
 
 export async function getStaticProps() {
 
-  const res = await fetch('/api/articles')
+  const res = await fetch(`${server}/api/articles`)
   const articles = await res.json()
 
 
