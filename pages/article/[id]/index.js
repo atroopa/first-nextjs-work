@@ -3,8 +3,8 @@ import Link from "next/link";
 
 const article = ({article}) => {
 
-    const router = useRouter();
-    const {id}   = router.query;
+    // const router = useRouter();
+    // const {id}   = router.query;
 
     return (
         <div>
