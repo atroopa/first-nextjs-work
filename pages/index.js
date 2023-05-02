@@ -25,7 +25,7 @@ export default function Home({articles}) {
 
 export async function getStaticProps() {
 
-  const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=6')
+  const res = await fetch('/api/articles')
   const articles = await res.json()
 
 
@@ -35,3 +35,17 @@ export async function getStaticProps() {
     },
   }
 }
+
+
+// export async function getStaticProps() {
+
+//   const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=6')
+//   const articles = await res.json()
+
+
+//   return {
+//     props: {
+//       articles,
+//     },
+//   }
+// }

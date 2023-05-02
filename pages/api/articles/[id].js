@@ -8,7 +8,7 @@ export default function handler({query: {id}}, res){
         res.status(200).json(filtered[0]);
     } else {
         res.status(400).json({
-            error: 'Article not Found !'
+            error: `Article with id of ${id} not Found !`
         })
     }
 
