@@ -1,10 +1,9 @@
-import { useRouter } from "next/router";
+import { server } from "@/config";
 import Link from "next/link";
 
 const article = ({article}) => {
 
-    // const router = useRouter();
-    // const {id}   = router.query;
+
 
     return (
         <div>
@@ -20,7 +19,7 @@ const article = ({article}) => {
 
 export const getServerSideProps = async context => {
     
-    const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${context.params.id}`);
+    const response = await fetch(`${server}/api/articles/${context.params.id}`);
     const article  = await response.json()
 
 
