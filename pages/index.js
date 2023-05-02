@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { Inter } from 'next/font/google'
 import ArticleList from '@/components/ArticleList';
 import { server } from '@/config';
+import Meta from '@/components/Meta';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -9,10 +10,7 @@ export default function Home({articles}) {
 
   return (
     <div>
-      <Head>
-        <title>Pars Click - Home</title>
-        <meta name="keyword" content="home , persian, iranian , parsclick, tutorial"/>
-      </Head>
+      <Meta title="Home" description="this news website" keyword="persian , iranian , news" />
 
       <div className='py-5 text-5xl'>
         Welcome to next
